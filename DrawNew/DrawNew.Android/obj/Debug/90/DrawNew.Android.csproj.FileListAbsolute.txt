@@ -1,0 +1,3 @@
+D:\Root\Škola\PRG\XAMARIN\DrawNew\DrawNew\DrawNew.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+D:\Root\Škola\PRG\XAMARIN\DrawNew\DrawNew\DrawNew.Android\obj\Debug\90\DrawNew.Android.nuget.stamp
+D:\Root\Škola\PRG\XAMARIN\DrawNew\DrawNew\DrawNew.Android\obj\Debug\90\DrawNew.Android.csprojAssemblyReference.cache

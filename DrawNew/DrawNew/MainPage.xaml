@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking.Forms;assembly=TouchTracking.Forms"
+             x:Class="DrawNew.MainPage"
+             xmlns:viewmodels="clr-namespace:DrawNew.ViewModels">
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid BackgroundColor="White"
+              VerticalOptions="FillAndExpand">
+                <skia:SKCanvasView x:Name="canvasView"
+                               PaintSurface="{Binding OnCanvasViewPaintSurface, Mode=TwoWay" />
+                <Grid.Effects>
+                    <tt:TouchEffect Capture="True"
+                                TouchAction="OnTouchEffectAction" />
+                </Grid.Effects>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Button Text="Clear"
+                Grid.Row="0"
+                Margin="50, 5"
+                Command="{Binding Clear}" />
+
+            <Button Text="Red"
+                Grid.Row="0"
+                Margin="50, 5"
+                Command="{Binding Red}" />
+
+            <Button Text="Blue"
+                Grid.Row="0"
+                Margin="50, 5"
+                Command="{Binding Blue}" />
+
+            <Button Text="Save"
+                Grid.Row="1"
+                Margin="50, 5"
+                Command="{Binding Save}" />
+
+            <Button Text="Bigger"
+                Grid.Row="1"
+                Margin="50, 5"
+                Command="{Binding Bigger}" /> <!--popř zpět na Clicked ...-->
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
